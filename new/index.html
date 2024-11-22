@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Drag Papers ❤️</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="paper heart">
+
+</div>
+   <div class="paper image">
+  <p> ❤️Take Care❤️</p>
+</div>
+    
+  <div class="paper image">
+  <p> No pressure at all</p>
+    <p>just wanted to reach out </p>
+     <p class="p1">and say hello<span style="color: red !important;">❤️</span></p>
+</div>
+
+  <div class="paper image">
+    <p> .    IF you’re open to it</p>
+    <p> How about we chat sometime😍❤</p>
+</div>
+  
+<div class="paper image">
+  <p> and I’d love the chance</p>
+    <p> to get to know you better😍 </p>
+</div>
+
+<div class="paper image">
+  <p</p>
+  <img src="https://i.postimg.cc/nhgN6fsv/2.jpg" />
+</div>
+
+<div class="paper image">
+  <p>and although we didn’t get a chance to talk</p>
+  <p> I felt there was something about you</p>
+    <p>that caught my attention.❤️</p>
+</div>
+
+
+
+<div class="paper red">
+<p class="p1"> I hope you’re doing well.</p>
+<p class="p2">We recently crossed paths 😍</p>
+</div>
+
+<div class="paper">
+<p class="p1">Hello😊</p>
+  <p class="p1">Dream Girl <span style="color: red !important;">❤️</span></p>
+</div>
+
+<div class="paper">
+<p class="p1">Drag the papers to move!</p>
+</div>
+<script src="mobile.js"></script>
+</body>
+</html>
+
+
+
+
+<html>
+<head>
+  <title>Background Music Player</title>
+  <style>
+    .toggleButton {
+      position: fixed;
+      bottom: 100px; /* Button moved up */
+      z-index: 9999;
+      width: 150px; /* Increased width */
+      height: 80px; /* Increased height */
+      background-color: #1DB954;
+      border-radius: 40px; /* Adjusted for larger size */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px; /* Increased padding */
+      font-size: 30px; /* Increased font size */
+      color: #fff; /* Text color */
+    }
+    .toggleButton:before,
+    .toggleButton:after {
+      content: "🌹";
+      width: 30px; /* Larger icon size */
+      height: 30px; /* Larger icon size */
+      border-radius: 50%;
+      transition: transform 2.0s ease;
+    }
+    .toggleButton:after {
+      transform: translateX(10px);
+    }
+    .toggleButton.active {
+      background-color: #1ED760;
+      animation: shine 1s infinite;
+    }
+    .toggleButton.active:before {
+      transform: translateX(25px);
+    }
+    .toggleButton.active:after {
+      transform: translateX(-25px);
+    }
+    @keyframes shine {
+      0% { opacity: 0.5; }
+      50% { opacity: 1; }
+      100% { opacity: 0.5; }
+    }
+    #toggleButtonRight {
+      right: 20px;
+      background: linear-gradient(to right, #CB5EEE, #4BE1EC);
+    }
+    #toggleButtonRight:before {
+      content: "🌜";
+      font-size: 40px; /* Larger icon size */
+    }
+    #toggleButtonRight:after {
+      content: "❤️";
+      font-size: 40px; /* Larger icon size */
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transition: transform 0.8s ease;
+    }
+    #toggleButtonRight.active:before {
+      transform: translateX(25px);
+    }
+    #toggleButtonRight.active:after {
+      transform: translateX(-30px);
+    }
+  </style>
+</head>
+<body>
+<audio id="backgroundMusic1" style="display: none;">
+  <source src="https://audio.jukehost.co.uk/qLggusoMnpYh13OvDPQH4WvJDA0swliU" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+  <button id="toggleButtonRight" class="toggleButton" onclick="toggleMusic('backgroundMusic1')">
+  🌹
+</button>
+  <script>
+  var toggleButtons = document.querySelectorAll(".toggleButton");
+  function toggleMusic(audioId) {
+    var audio = document.getElementById(audioId);
+    var button = document.querySelector("[onclick=\"toggleMusic('" + audioId + "')\"]");
+    if (audio.paused) {
+      audio.play();
+      button.classList.add("active");
+    } else {
+      audio.pause();
+      button.classList.remove("active");
+    }
+  }
+
+  var backgroundMusic1 = document.getElementById("backgroundMusic1");
+  backgroundMusic1.onended = function() {
+    backgroundMusic1.play();
+  };
+  </script>
+</body>
+</html>
